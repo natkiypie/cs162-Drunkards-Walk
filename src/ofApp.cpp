@@ -1,0 +1,68 @@
+#include "ofApp.h"
+#include "Drunkard.h"
+
+void ofApp::setup() {
+  aka47.load("aka47.mp3");
+  aka47.play();
+  ofSetBackgroundColor(0, 0, 0);
+  drunkards = new Drunkard* [NUMBER_OF_DRUNKARDS];
+  for (int i = 0; i < NUMBER_OF_DRUNKARDS; ++i) {
+    drunkards[i] = new Drunkard();
+  }
+}
+
+void ofApp::update() {
+  for (int i = 0; i < NUMBER_OF_DRUNKARDS; ++i) {
+    drunkards[i]->move();
+  }
+}
+
+void ofApp::draw() {
+  for (int i = 0; i < NUMBER_OF_DRUNKARDS; ++i) {
+    drunkards[i]->draw();
+  }
+}
+
+void ofApp::keyPressed(int key) {
+
+}
+
+void ofApp::keyReleased(int key) {
+
+}
+
+void ofApp::mouseMoved(int x, int y ) {
+
+}
+
+void ofApp::mouseDragged(int x, int y, int button) {
+
+}
+
+void ofApp::mousePressed(int x, int y, int button) {
+
+}
+
+void ofApp::mouseReleased(int x, int y, int button) {
+
+}
+
+void ofApp::mouseEntered(int x, int y) {
+
+}
+
+void ofApp::mouseExited(int x, int y) {
+
+}
+
+void ofApp::windowResized(int w, int h) {
+
+}
+
+void ofApp::gotMessage(ofMessage msg) {
+
+}
+
+void ofApp::dragEvent(ofDragInfo dragInfo) { 
+
+}
